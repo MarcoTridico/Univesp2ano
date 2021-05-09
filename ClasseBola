@@ -1,0 +1,42 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        class Bola {
+            private String material;
+            private String cor;
+            private int tamanho;
+            private boolean cheia;
+
+        public Bola(String material, String cor, int tamanho, boolean cheia){
+            this.material = material;
+            this.cor = cor;
+            this.tamanho = tamanho;
+            this.cheia = cheia;
+        }
+        public void setMaterial(String material){
+            this.material = material;
+            }
+        public void pintar(String cor){
+            this.cor = cor;
+            }
+        public void encher(){
+            this.cheia = true;
+            } 
+        public void esvaziar(){
+            this.cheia = false;
+            }       
+        }
+        var bola1 = new Bola("plastico", "vermelha", 20, true );
+        System.out.println("material da bola 1: " + bola1.material);
+        System.out.println("cor da bola 1: " + bola1.cor);
+        System.out.println("tamanho da bola 1: " + bola1.tamanho);
+        System.out.println("estado da bola 1: " + bola1.cheia);
+        bola1.setMaterial("couro");
+        bola1.pintar("azul");
+        System.out.println("material da bola 1: " + bola1.material);
+        bola1.esvaziar();
+        System.out.println("estado da bola 1: " + bola1.cheia);
+        bola1.encher();
+        System.out.println("estado da bola 1: " + bola1.cheia);
+    }
+
+}
